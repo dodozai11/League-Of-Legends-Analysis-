@@ -1,6 +1,6 @@
 title: "League of Legends Analysis"
 description: "DSC80-Project04"
-theme: jekyll-theme-cayman  # Or other GitHub-supported themes
+theme: jekyll-theme-modernist
 github:
   is_project_page: true
   repository_url: "https://github.com/dodozai11/League-Of-Legends-Analysis-"
