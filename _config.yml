@@ -1,3 +1,11 @@
+title: "League of Legends Analysis"
+description: "DSC80-Project04"
+theme: jekyll-theme-cayman  # Or other GitHub-supported themes
+github:
+  is_project_page: true
+  repository_url: "https://github.com/dodozai11/League-Of-Legends-Analysis-"
+  
+# Optional: Add custom CSS
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
