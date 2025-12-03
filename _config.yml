@@ -5,7 +5,3 @@ github:
   is_project_page: true
   repository_url: "https://github.com/dodozai11/League-Of-Legends-Analysis-"
   
-# Optional: Add custom CSS
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-remote-theme
