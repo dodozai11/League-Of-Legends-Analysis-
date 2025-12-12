@@ -46,6 +46,7 @@ For this case study, we will be keeping the rows result, teamname, league, first
 xpdiffat15, csdiffat15, and damagetochampions. Most of these stats are relevant as we want to focus on how often Western/Eastern teams are able to 
 secure early game advantages. The study will also filter for the major 2025 leagues, that being MSI, Worlds, First Stand, and EWC, which are the big events 
 where all tier 1 regions compete.
+
 | teamname       | league | gamelength | gameid            | firsttower | firstdragon | void_grubs | killsat10 | deaths | assists | golddiffat15 | xpdiffat15 | csdiffat15 | damagetochampions | region | West/East | dpm             | early_obj_score |
 |----------------|--------|------------|-------------------|------------|-------------|------------|-----------|--------|---------|--------------|------------|------------|-------------------|--------|-----------|-----------------|-----------------|
 | Karmine Corp   | FST    | 1921       | LOLTMNT01_210872  | 1.0        | 0.0         | 5.0        | 0.0       | 20     | 5       | -777.0       | -500.0     | 31.0       | 59887             | LEC    | West      | 1870.494534     | 6.0             |
