@@ -61,3 +61,13 @@ The derived colummns region indicates team region, West/East represents whether 
 
 <iframe src="assets/early_obj_score_histogram.html" width="800" height="600" frameborder="0" ></iframe>
 
+The histogram shows that the distribution of teams' early objective score is nearly normal (consists of sum of firsttower, firstdragon, void_grubs, and killsat10). This data is well behaved and is distributed in a balanced manner among all teams.
+
+<iframe src="assets/TeamDPM.html" width="800" height="600" frameborder="0" ></iframe>
+
+The histogram shows that the distribution of teams' damage per minute is nearly normal. This data is well behaved and is distributed in a balanced manner among all teams.
+
+
+
+<iframe src="assets/PermEarlyObj.html" width="800" height="600" frameborder="0" ></iframe>
+
