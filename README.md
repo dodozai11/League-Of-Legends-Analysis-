@@ -67,6 +67,31 @@ The histogram shows that the distribution of teams' early objective score is nea
 
 The histogram shows that the distribution of teams' damage per minute is nearly normal. This data is well behaved and is distributed in a balanced manner among all teams.
 
+#Bivariate Analysis
+
+<iframe src="assets/regionintWR.html" width="800" height="600" frameborder="0" ></iframe>
+
+This bar chart shows the win rates of the 5 major regions at international events. From the chart, it can be seen that LCK and LPL sport the highest winratem which follows the trend of Eastern dominance we have been seing.
+
+#Interesting Aggregates
+
+| region | kills | deaths | golddiffat15 | dpm | gamelength |
+|--------|-------|--------|--------------|-----|------------|
+| LCK    | 16.74 | 13.13 | 314.56       | 2851.70 | 1954.10   |
+| LCP    | 13.33 | 15.04 | -133.91      | 2504.16 | 1911.45   |
+| LEC    | 12.65 | 14.58 | -487.58      | 2514.40 | 1914.89   |
+| LPL    | 14.97 | 15.36 | 365.64       | 2780.16 | 1917.61   |
+| LTA    | 13.50 | 16.61 | -502.10      | 2637.45 | 1965.24   |
+
+This Aggregate was created by using the groupby method on the region column. From the table it can be seen that LCK and LPL seem to constantly take 1st and 2nd in the metrics, also being the only regions with possitive golddiffat15. LCP is also close behind, but it seems that the Western regions LEC and LTA perform the worst
+
+#Assignmment of Missingness
+
+#NMAR Analysis
+From the oracle Elixer dataset, it can be seen that some of the ban column values are missing. This, however, is NMAR because players can choose to not ban a champion during drafting phase. Therefore, the chance a ban value being missing is based on itself and not on another column.
+
+#Missingness Dependency
+
 
 
 <iframe src="assets/PermEarlyObj.html" width="800" height="600" frameborder="0" ></iframe>
