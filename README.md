@@ -59,5 +59,5 @@ The derived colummns region indicates team region, West/East represents whether 
 
 #Univariate Analysis
 
-<iframe src="assets/early_obj_score_historgram.html" width="800" height="600" frameborder="0" ></iframe>
+<iframe src="assets/early_obj_score_histogram.html" width="800" height="600" frameborder="0" ></iframe>
 
