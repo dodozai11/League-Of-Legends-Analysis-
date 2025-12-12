@@ -4,7 +4,6 @@
   <span class="icon"></span>
   GitHub
 </a>
-
 author: Terry Su
 
 The League of Legends Regional Performance Analysis is a case study conducted at UCSD, with the goal of exploring performance vs region
@@ -27,3 +26,35 @@ mark differ systematically between East and West. Using data analysis techniques
 Furthermore, we will develop a predictive model to forecast match winners based on 15-minute game states, while ensuring this model treats both regions fairly.
 
 # Dataset Columns
+From the Oracle Elixir Dataset, there are 118932 rows holding in-game data and descriptive statistics relating to the game. A single game takes up 12 lines in the dataset, with 10 lines to the players and two lines with an overall summary for the matched teams. For our study on performance metrics between Western and Eastern teams at international events, we will use the following columns:
+
+- result: This column shows the winner/loser of a game, with 1 for win and 0 for loss
+- teamname: name of team/organization
+- league: tournament event or promotion that in which the match takes place
+- firsttower: indicates the team that was able to secure the first tower takedown, with 1 for first tower take down and 0 for the opposing teamm
+- firstdragon: indicates the team that was able to secure the first dragon takedown, with 1 for first dragon take down and 0 for the opposing teamm
+- void_grubs: indicates the numbers of void_grubs secured by a team, ranging from 0-3
+- gamelength: time a game takes to complete in seconds
+- killsat10: nummber of kills a team collectively achieves in the first 10 minutes of a game
+- golddiffat15: how much gold an individual player has over the opponent of the same role at 15 minutes or how much gold a team collectively has over the opposing team at 15 minutes depending on the row
+- xpdiffat15: how much xp an individual player has over the opponent of the same role at 15 minutes or how much xp a team collectively has over the opposing team at 15 minutes depending on the row (xp: experience)
+- csdiffat15: how much cs an individual player has over the opponent of the same role at 15 minutes or how much cs a team collectively has over the opposing team at 15 minutes depending on the row (cs: creep score, minions or jungle monseter kills)
+- damagetochampions: total damage dealt to opposing player of the same role or collective team depending on row over the course of the game length
+
+# Data Cleaning and Exploratory Data Analysis
+For this case study, we will be keeping the rows result, teamname, league, firsttower, firstdragon, void_grubs, gamelength, killsat10, golddiffat15,
+xpdiffat15, csdiffat15, and damagetochampions. Most of these stats are relevant as we want to focus on how often Western/Eastern teams are able to 
+secure early game advantages. The study will also filter for the major 2025 leagues, that being MSI, Worlds, First Stand, and EWC, which are the big events 
+where all tier 1 regions compete.
+| teamname       | league | gamelength | gameid            | firsttower | firstdragon | void_grubs | killsat10 | deaths | assists | golddiffat15 | xpdiffat15 | csdiffat15 | damagetochampions | region | West/East | dpm             | early_obj_score |
+|----------------|--------|------------|-------------------|------------|-------------|------------|-----------|--------|---------|--------------|------------|------------|-------------------|--------|-----------|-----------------|-----------------|
+| Karmine Corp   | FST    | 1921       | LOLTMNT01_210872  | 1.0        | 0.0         | 5.0        | 0.0       | 20     | 5       | -777.0       | -500.0     | 31.0       | 59887             | LEC    | West      | 1870.494534     | 6.0             |
+| Team Liquid    | FST    | 1921       | LOLTMNT01_210872  | 0.0        | 1.0         | 1.0        | 2.0       | 2      | 48      | 777.0        | 500.0      | -31.0      | 80370             | LTA    | West      | 2510.255075     | 4.0             |
+| Karmine Corp   | FST    | 1400       | LOLTMNT01_210882  | 1.0        | 0.0         | 4.0        | 4.0       | 5      | 31      | 3231.0       | 2317.0     | 33.0       | 63853             | LEC    | West      | 2736.557143     | 9.0             |
+| Team Liquid    | FST    | 1400       | LOLTMNT01_210882  | 0.0        | 1.0         | 2.0        | 0.0       | 20     | 7       | -3231.0      | -2317.0    | -33.0      | 40713             | LTA    | West      | 1744.842857     | 3.0             |
+| Team Liquid    | FST    | 2065       | LOLTMNT01_210884  | 1.0        | 0.0         | 2.0        | 0.0       | 3      | 50      | 1990.0       | 3283.0     | 18.0       | 86972             | LTA    | West      | 2527.031477     | 3.0             |
+
+The derived colummns region indicates team region, West/East represents whether a team is from mthe West or East, dpm represents damage to champions per minute from team, and early_obj_score is a score representing the sum of firsttower, firstdragon, voidgrubs, and killsat10.
+
+#Univariate Analysis
+
